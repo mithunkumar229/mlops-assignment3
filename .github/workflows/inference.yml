@@ -1,0 +1,30 @@
+name: Inference
+
+on:
+  workflow_dispatch:
+    inputs:
+      input_text:
+        description: "Text to classify"
+        required: true
+        default: "This is a sample input for classification."
+
+jobs:
+  infer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install inference dependencies
+        run: pip install transformers torch huggingface-hub
+
+      - name: Run inference
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_MODEL_NAME: your-hf-username/your-model-repo
+          INPUT_TEXT: ${{ github.event.inputs.input_text }}
+        run: python src/inference.py

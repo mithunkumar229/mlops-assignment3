@@ -1,0 +1,11 @@
+.git
+.github
+data
+models
+reports
+notebooks
+wandb
+__pycache__
+*.pyc
+.env
+.venv

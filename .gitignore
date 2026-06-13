@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Data and models
+data/raw/*
+data/processed/*
+models/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/.gitkeep
+
+# Secrets
+*.key
+*.pem
+.env
+wandb/
+.kaggle/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Reports
+reports/*.pdf
