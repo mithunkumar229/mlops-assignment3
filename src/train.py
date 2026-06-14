@@ -7,7 +7,6 @@ Training for submission should be run on Kaggle, not GitHub Actions.
 import argparse
 import json
 import os
-from pathlib import Path
 
 import pandas as pd
 import wandb
