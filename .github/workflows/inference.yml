@@ -25,6 +25,6 @@ jobs:
       - name: Run inference
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-          HF_MODEL_NAME: your-hf-username/your-model-repo
+          HF_MODEL_NAME: Mithunkumar229/distilbert-emotion-mlops-a3
           INPUT_TEXT: ${{ github.event.inputs.input_text }}
         run: python src/inference.py
