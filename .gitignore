@@ -27,3 +27,4 @@ wandb/
 
 # Reports
 reports/*.pdf
+.project
